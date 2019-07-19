@@ -1,0 +1,91 @@
+[
+    {
+        "title": "Brown Sales INC",
+        "summary": "WordPress was a requirement for this site, so I learned WordPress and made Brown Sales a site for their multi-family flooring business" ,
+        "image": "/images/brownsalesaz.PNG",
+        "link": "https://brownsalesaz.com/",
+        "gradient": "#A6FFCB, #1FA2FF",
+        "tech": ["wordpress"]
+    },
+    {
+        "title": "Brown Sales Flooring",
+        "summary": "I created this site for Brown Sales as a portal to all of their other sites" ,
+        "image": "/images/brownsalesflooring.PNG",
+        "link": "https://brownsalesflooring.com/",
+        "repo": "https://github.com/xeroneon/brownsales/",
+        "gradient": "#F09819, #FF512F",
+        "tech": ["html", "css"]
+
+    },
+    {
+        "title": "Brightstar Bucks",
+        "summary": "Managers can create goals for employees and upon completion they recieve credits to purchase company merch." ,
+        "image": "/images/brightstar-bucks.PNG",
+        "link": "https://brightstarbucks.herokuapp.com/",
+        "repo": "https://github.com/xeroneon/brightstar/",
+        "gradient": "#AA076B, #61045F",
+        "tech": ["mongo", "express", "react", "node"]
+
+    },
+    {
+        "title": "HIKER",
+        "summary": "When users go hiking they can check in and if they dont check out in time their emergency contacts are notified by text." ,
+        "image": "/images/hiker.PNG",
+        "link": "https://hiker-az.herokuapp.com/",
+        "repo": "https://github.com/xeroneon/Hiker/",
+        "gradient": "#B5AC49, #3CA55C",
+        "tech": ["mongo", "express", "react", "node"]
+        
+
+    },
+    {
+        "title": "No Mans Sky Trivia",
+        "summary": "A trivia game using on click events, timers and more to dynamically change the webpage." ,
+        "image": "/images/nmstrivia.PNG",
+        "link": "https://xeroneon.github.io/TriviaGame/",
+        "repo": "https://github.com/xeroneon/TriviaGame/",
+        "gradient": "#00CDAC, #02AAB0",
+        "tech": ["html", "css", "js"]
+
+    },
+    {
+        "title": "League of Clicks",
+        "summary": "This application showcases what I learned in React the first week I learned it." ,
+        "image": "/images/clicky.PNG",
+        "link": "https://clicky-ua.herokuapp.com/",
+        "repo": "https://github.com/xeroneon/clicky/",
+        "gradient": "#5BB0B7, #4E7984",
+        "tech": ["react"]
+
+    },
+    {
+        "title": "Map-up",
+        "summary": "This was the first project I did with a group in the bootcamp I attended." ,
+        "image": "/images/map-up.PNG",
+        "link": "https://xeroneon.github.io/Project-1/",
+        "repo": "https://github.com/xeroneon/Project-1/",
+        "gradient": "#BE8BBD, #960398",
+        "tech": ["html", "css", "js"]
+
+    },
+    {
+        "title": "Crystal Collector",
+        "summary": "A simple Javascript/JQuery game using click events and random numbers." ,
+        "image": "/images/crystalcollector.PNG",
+        "link": "https://xeroneon.github.io/unit-4-game/",
+        "repo": "https://github.com/xeroneon/unit-4-game/",
+        "gradient": "#54BBFF, #2E95EF",
+        "tech": ["html", "css", "js"]
+
+    },
+    {
+        "title": "myDeck",
+        "summary": "Users can create and manage Magic: The Gathering decks." ,
+        "image": "/images/project-2.PNG",
+        "link": "https://safe-coast-77807.herokuapp.com/",
+        "repo": "https://github.com/xeroneon/project-2/",
+        "gradient": "#EA384D, #D31027",
+        "tech": ["mysql", "express", "react", "node"]
+
+    }
+]
