@@ -8,14 +8,23 @@ const styles = {
         color: "white",
         border: "solid 2px white",
         borderRadius: "5px",
-        width: "120px",
-        height: "45px",
+        width: "6vw",
+        minWidth: "100px",
+        height: "2.5vw",
+        minHeight: "40px",
         textDecoration: "none",
         display: "block",
-        textAlign: "center",
+        // textAlign: "center",
         fontWeight: "bold",
-        lineHeight: "45px",
-        margin: "10px"
+        // lineHeight: "2.5vw",
+        margin: "10px",
+        display: "flex",
+        placeContent: "center",
+        alignItems: "center",
+
+        '&:hover': {
+            cursor: "pointer"
+        }
 
     }
 }

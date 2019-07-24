@@ -65,7 +65,7 @@
         "link": "https://xeroneon.github.io/Project-1/",
         "repo": "https://github.com/xeroneon/Project-1/",
         "gradient": "#BE8BBD, #960398",
-        "tech": ["html", "css", "js"]
+        "tech": ["html", "css", "js", "firebase"]
 
     },
     {
@@ -85,7 +85,7 @@
         "link": "https://safe-coast-77807.herokuapp.com/",
         "repo": "https://github.com/xeroneon/project-2/",
         "gradient": "#EA384D, #D31027",
-        "tech": ["mysql", "express", "react", "node"]
+        "tech": ["mysql", "express", "handlebars", "node"]
 
     }
 ]

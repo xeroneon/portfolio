@@ -4,10 +4,30 @@ import FlexItem from './Flex/FlexItem'
 import PortfolioItem from './PortfolioItem'
 import projects from "../projects";
 
+import InjectSheet from 'react-jss';
+
+const styles = {
+    container: {
+        display: "grid",
+        gridTemplateColumns: "1fr", 
+        gridGap: "10px",
+        padding: "60px",
+    },
+
+    '@media (max-width: 1024px)': {
+        container: {
+            gridTemplateColumns: "1fr 1fr !important"
+        }
+    }
+}
+
 const Portfolio = props => {
+
+    const { classes } = props;
+
     return(
         <>
-        <div style={{padding: "60px"}}>
+        <div className={classes.container}>
 
         {projects.map(project => {
             if (!project.tech.includes(props.selTech) && props.selTech != "") {
@@ -22,4 +42,6 @@ const Portfolio = props => {
     )
 }
 
-export default Portfolio;
+const StyledPortfolio = InjectSheet(styles)(Portfolio)
+
+export default StyledPortfolio;

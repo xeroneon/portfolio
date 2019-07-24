@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Flex from './Flex/Flex'
 import FlexItem from './Flex/FlexItem'
 import Button from './Button'
@@ -14,14 +14,14 @@ const styles = {
         backgroundImage: `linear-gradient(${props.gradient || '#FFAA54, #EFB52E'})`,
         width: "100%",
         marginBottom: "20px",
-        borderRadius: "40px",
-        height: "300px" }),
+        borderRadius: "20px",
+        height: "15vw" }),
     p: {
         width: "80%",
-        fontSize: "2vw"
+        fontSize: "1vw"
     },
     h1: {
-        fontSize: "3vw"
+        fontSize: "2.5vw"
     },
     buttons: {
         display: "flex",
@@ -30,7 +30,7 @@ const styles = {
     },
     img: {
         width: "100%",
-        borderRadius: "30px"
+        borderRadius: "20px",
     },
     imgDiv: {
         padding: "10px",
@@ -52,9 +52,31 @@ const styles = {
         }
     },
 
-    '@media (min-width: 1024px)': {
+    '@media (max-width: 1024px)': {
+        container: {
+            gridTemplateColumns: "1fr !important",
+            gridTemplateRows: "auto",
+            height: "auto !important",
+            padding: "0"
+            // gridTemplateRows: "1fr 1fr 1fr 1fr",
+        },
+        h1: {
+            padding: "5px"
+        },
+        tech: {
+            display: "none"
+        },
+        buttons: {
+            flexDirection: "row",
+            justifyContent: "start"
+        },
+        imgDiv: {
+            padding: "0",
+            marginTop: "20px"
+        },
         p: {
-          fontSize: "1vw"
+          fontSize: "14px",
+          display: "none"
         }
       }
 }
@@ -63,21 +85,45 @@ const PortfolioItem = props => {
 
     const { classes, tech } = props;
 
-    const something = useSpring({
+    const [width, setWidth ] = useState(window.innerWidth);
+    const [ isMobile, setIsMobile ] = useState()
+
+    // useEffect(() => {
+    //     window.addEventListener('resize', () => {
+    //         setWidth(window.innerWidth)
+    //         if(window.innerWidth > 1024) {
+    //             setIsMobile(false)
+    //         } else {
+    //             setIsMobile(true)
+    //         }
+    //     });
+
+    //     if(window.innerWidth > 1024) {
+    //         setIsMobile(false)
+    //     } else {
+    //         setIsMobile(true)
+    //     }
+
+    //     // if(window.inner)
+    //     console.log(window.innerWidth)
+    // }, [])
+
+    const bounceIn = useSpring({
         to: async (next, cancel) => {
-            await next({opacity: .5, transform: "scale(1.1)"})
-            await next({opacity: .7, transform: "scale(0.9)"})
+            await next({opacity: 1, transform: "scale(1.05)"})
+            await next({opacity: 1, transform: "scale(0.95)"})
             await next({opacity: 1, transform: "scale(1)"})
 
 
           },
-        from: {opacity: 0, transform: "scale(0)"},
-        config: {duration: 100}
+        from: {opacity: 0, transform: "scale(0.4)"},
+        config: {duration: 120}
     })
 
     return (
         <>
-                <animated.div style={something} className={classes.container}>
+                <animated.div style={bounceIn} className={classes.container}>
+                    {/* {!isMobile && */}
                     <div className={classes.tech}>
                         {tech.map(item => {
                             return <img src={`/images/${item}.png`}/>
