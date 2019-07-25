@@ -78,8 +78,9 @@ const styles = {
       right: props => props.open ? "0" : "-70vw",
       transition: "right .5s",
       zIndex: "1",
-      background: "#000",
+      background: "#212121",
       overflowY: "scroll",
+      borderRadius: "30px 0 0 30px"
 
     },
 
