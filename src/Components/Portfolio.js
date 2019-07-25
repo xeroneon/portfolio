@@ -12,11 +12,13 @@ const styles = {
         gridTemplateColumns: "1fr", 
         gridGap: "30px",
         padding: "60px",
+        filter: props => props.open ? "blur(20px)" : "none"
     },
 
     '@media (max-width: 1350px)': {
         container: {
-            gridTemplateColumns: "1fr 1fr !important"
+            gridTemplateColumns: "1fr 1fr !important",
+            padding: "30px"
         }
     },
 
@@ -33,7 +35,7 @@ const Portfolio = props => {
 
     return(
         <>
-        <div className={classes.container}>
+        <div className={classes.container} onClick={() => props.close()}>
 
         {projects.map(project => {
             if (!project.tech.includes(props.selTech) && props.selTech != "") {

@@ -79,7 +79,7 @@ const styles = {
     borderRadius: "0 30px 0 0"
   },
 
-  '@media (min-width: 1024px)': {
+  '@media (min-width: 1025px)': {
     drawerButton: {
         display: "none"
     }
@@ -87,10 +87,12 @@ const styles = {
 
   '@media (max-width: 1024px)': {
     container: {
-      gridTemplateColumns: "1fr"
+      gridTemplateColumns: "1fr",
+      // filter: "blur(20px)"
     },
     portfolio: {
-      background: "#212121"
+      background: "#212121",
+
     },  
 
     sideMenu: {
@@ -100,7 +102,9 @@ const styles = {
       top: "0",
       right: "-600px",
       zIndex: "1",
-      background: "#000"
+      background: "#000",
+      // filter: "blur(20px)"
+
     },
   }
 }
@@ -114,17 +118,27 @@ const App = props => {
 
   const setAll = () => {
     setTech("");
+    setOpen(false)
+  }
+
+  const updateTech = tech => {
+    setTech(tech)
+    setOpen(false)
+  }
+
+  const close = () => {
+    setOpen(false)
   }
 
   return (
     <>
-      <Nav />
+      <Nav open={open} close={() => close()} />
       <div className={classes.drawerButton} onClick={() => setOpen(!open)}>i</div>
       <div className={classes.container}>
         <div className={classes.portfolio}>
-          <Portfolio selTech={tech} />
+          <Portfolio selTech={tech} open={open} close={() => close()}/>
         </div>
-        <Sidebar open={open} close={() => setOpen(false)} setTech={(tech) => setTech(tech)} setAll={() => setAll()}/>
+        <Sidebar open={open} close={() => setOpen(false)} setTech={(tech) => setTech(tech)} updateTech={tech => updateTech(tech)} setAll={() => setAll()}/>
       </div>
     </>
   );

@@ -66,7 +66,7 @@ const styles = {
             // gridTemplateRows: "1fr 1fr 1fr 1fr",
         },
         h1: {
-            padding: "5px",
+            padding: "10px",
             fontSize: "3vw"
         },
         tech: {
