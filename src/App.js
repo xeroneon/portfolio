@@ -64,7 +64,7 @@ const styles = {
     textAlign: "center"
   },
   drawerButton: {
-    position: "fixed",
+    position: "absolute",
     top: "10px",
     right: "10px",
     display: "grid",

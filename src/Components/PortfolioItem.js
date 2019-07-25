@@ -125,7 +125,7 @@ const PortfolioItem = props => {
                         <p className={classes.p}>{props.summary}</p>
                     </div>
                     <div className={classes.buttons}>
-                        <Button name="REPO" href={props.repo} />
+                        { props.repo && <Button name="REPO" href={props.repo} />}
                         <Button name="LIVE SITE" href={props.link} />
 
                     </div>
