@@ -62,15 +62,20 @@ const styles = {
     border: "white solid 2px",
     borderRadius: "50%"
   },
+  '@media (min-width: 1024px)': {
+    drawerButton: {
+        display: "none"
+    }
+  },
 
   '@media (max-width: 1024px)': {
 
     sideMenu: {
       position: "fixed !important",
       height: "100vh !important",
-      width: "600px",
+      width: "70vw",
       top: "0",
-      right: props => props.open ? "0" : "-600px",
+      right: props => props.open ? "0" : "-70vw",
       transition: "right .5s",
       zIndex: "1",
       background: "#000",
@@ -90,11 +95,6 @@ const styles = {
 const Sidebar = props => {
 
   const { classes } = props
-  const [tech, setTech] = useState("")
-
-  const setAll = () => {
-    setTech("");
-  }
 
   return (
     <>
@@ -115,21 +115,21 @@ const Sidebar = props => {
           <div className={classes.all}>
             {/* <Button onClick={() => setAll()} name="All" target /> */}
             {/* <div onClick={() => setAll()}>All</div> */}
-            <img onClick={() => setAll()} src="/images/all.png" />
+            <img onClick={() => props.setAll()} src="/images/all.png" />
           </div>
 
           <div className={classes.tech}>
-            <img className={classes.techImg} onClick={() => setTech("mongo")} src="/images/mongo.png" />
-            <img className={classes.techImg} onClick={() => setTech("mysql")} src="/images/mysql.png" />
-            <img className={classes.techImg} onClick={() => setTech("react")} src="/images/react.png" />
-            <img className={classes.techImg} onClick={() => setTech("firebase")} src="/images/firebase.png" />
-            <img className={classes.techImg} onClick={() => setTech("node")} src="/images/node.png" />
-            <img className={classes.techImg} onClick={() => setTech("js")} src="/images/js.png" />
-            <img className={classes.techImg} onClick={() => setTech("express")} src="/images/express.png" />
-            <img className={classes.techImg} onClick={() => setTech("handlebars")} src="/images/handlebars.png" />
-            <img className={classes.techImg} onClick={() => setTech("html")} src="/images/html.png" />
-            <img className={classes.techImg} onClick={() => setTech("css")} src="/images/css.png" />
-            <img className={classes.techImg} onClick={() => setTech("wordpress")} src="/images/wordpress.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("mongo")} src="/images/mongo.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("mysql")} src="/images/mysql.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("react")} src="/images/react.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("firebase")} src="/images/firebase.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("node")} src="/images/node.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("js")} src="/images/js.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("express")} src="/images/express.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("handlebars")} src="/images/handlebars.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("html")} src="/images/html.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("css")} src="/images/css.png" />
+            <img className={classes.techImg} onClick={() => props.setTech("wordpress")} src="/images/wordpress.png" />
           </div>
         </div>
     </>

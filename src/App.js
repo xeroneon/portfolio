@@ -74,11 +74,24 @@ const styles = {
     border: "white solid 2px",
     borderRadius: "50%"
   },
+  portfolio: {
+    background: "#424242",
+    borderRadius: "0 30px 0 0"
+  },
+
+  '@media (min-width: 1024px)': {
+    drawerButton: {
+        display: "none"
+    }
+  },
 
   '@media (max-width: 1024px)': {
     container: {
       gridTemplateColumns: "1fr"
     },
+    portfolio: {
+      background: "#212121"
+    },  
 
     sideMenu: {
       position: "fixed !important",
@@ -99,15 +112,19 @@ const App = props => {
   const [tech, setTech] = useState("")
   const [ open, setOpen ] = useState(false)
 
+  const setAll = () => {
+    setTech("");
+  }
+
   return (
     <>
       <Nav />
       <div className={classes.drawerButton} onClick={() => setOpen(!open)}>i</div>
       <div className={classes.container}>
-        <div style={{ background: "#424242", borderRadius: "0 30px 0 0" }}>
+        <div className={classes.portfolio}>
           <Portfolio selTech={tech} />
         </div>
-        <Sidebar open={open} close={() => setOpen(false)}/>
+        <Sidebar open={open} close={() => setOpen(false)} setTech={(tech) => setTech(tech)} setAll={() => setAll()}/>
       </div>
     </>
   );
