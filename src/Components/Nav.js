@@ -1,6 +1,4 @@
 import React from 'react';
-import Flex from './Flex/Flex'
-import FlexItem from './Flex/FlexItem'
 
 import InjectSheet from 'react-jss';
 
@@ -51,19 +49,7 @@ const Nav = props => {
     return (
         <>
             <nav className={classes.container} onClick={() => props.close()}>
-                <img src="/images/logo.png" className={classes.img}/>
-
-                {/* <div> */}
-                    {/* <Flex justifyContent="center" alignitems="center">
-                        <FlexItem> */}
-                        {/* <div>
-                            <h1>Andrew Vasquez</h1>
-                            <h3>Web Developer</h3>
-                        </div> */}
-                        {/* <img src="images/headshot.jpg"/> */}
-                        {/* </FlexItem>
-                    </Flex> */}
-                {/* </div> */}
+                <img src="/images/logo.png" className={classes.img} alt="Andrew Vasquez Logo"/>
             </nav>
         </>
     )

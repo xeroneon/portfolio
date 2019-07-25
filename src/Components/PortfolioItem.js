@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Flex from './Flex/Flex'
-import FlexItem from './Flex/FlexItem'
+import React from 'react';
 import Button from './Button'
 
 import InjectSheet from 'react-jss';
@@ -63,7 +61,6 @@ const styles = {
             gridTemplateRows: "auto",
             height: "auto !important",
             padding: "0"
-            // gridTemplateRows: "1fr 1fr 1fr 1fr",
         },
         h1: {
             padding: "10px",
@@ -116,7 +113,7 @@ const PortfolioItem = props => {
                 <animated.div style={bounceIn} className={classes.container}>
                     <div className={classes.tech}>
                         {tech.map(item => {
-                            return <img src={`/images/${item}.png`}/>
+                            return <img src={`/images/${item}.png`} alt={item} key={item + props.image}/>
                         })}
 
                     </div>
@@ -130,7 +127,7 @@ const PortfolioItem = props => {
 
                     </div>
                     <div className={classes.imgDiv}>
-                        <img src={props.image} className={classes.img}/>
+                        <img src={props.image} className={classes.img} alt={props.image}/>
                     </div>
                 </animated.div>
         </>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './Button'
 
 import InjectSheet from 'react-jss';
@@ -105,7 +105,7 @@ const Sidebar = props => {
         <div className={classes.sideMenu}>
             <div className={classes.drawerButton} onClick={ () => props.close()}>X</div>
           <div className={classes.headshot}>
-            <img src="images/headshot.jpg"></img>
+            <img src="images/headshot.jpg" alt="headshot"></img>
           </div>
 
           <div className={classes.links}>
@@ -117,23 +117,21 @@ const Sidebar = props => {
           </div>
 
           <div className={classes.all}>
-            {/* <Button onClick={() => setAll()} name="All" target /> */}
-            {/* <div onClick={() => setAll()}>All</div> */}
-            <img onClick={() => props.setAll()} src="/images/all.png" />
+            <img onClick={() => props.setAll()} src="/images/all.png" alt="all projects"/>
           </div>
 
           <div className={classes.tech}>
-            <img className={classes.techImg} onClick={() => props.updateTech("mongo")} src="/images/mongo.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("mysql")} src="/images/mysql.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("react")} src="/images/react.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("firebase")} src="/images/firebase.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("node")} src="/images/node.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("js")} src="/images/js.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("express")} src="/images/express.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("handlebars")} src="/images/handlebars.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("html")} src="/images/html.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("css")} src="/images/css.png" />
-            <img className={classes.techImg} onClick={() => props.updateTech("wordpress")} src="/images/wordpress.png" />
+            <img className={classes.techImg} alt="mongo" onClick={() => props.updateTech("mongo")} src="/images/mongo.png" />
+            <img className={classes.techImg} alt="mysql" onClick={() => props.updateTech("mysql")} src="/images/mysql.png" />
+            <img className={classes.techImg} alt="react" onClick={() => props.updateTech("react")} src="/images/react.png" />
+            <img className={classes.techImg} alt="firebase" onClick={() => props.updateTech("firebase")} src="/images/firebase.png" />
+            <img className={classes.techImg} alt="node" onClick={() => props.updateTech("node")} src="/images/node.png" />
+            <img className={classes.techImg} alt="js" onClick={() => props.updateTech("js")} src="/images/js.png" />
+            <img className={classes.techImg} alt="express" onClick={() => props.updateTech("express")} src="/images/express.png" />
+            <img className={classes.techImg} alt="handlebars" onClick={() => props.updateTech("handlebars")} src="/images/handlebars.png" />
+            <img className={classes.techImg} alt="html" onClick={() => props.updateTech("html")} src="/images/html.png" />
+            <img className={classes.techImg} alt="css" onClick={() => props.updateTech("css")} src="/images/css.png" />
+            <img className={classes.techImg} alt="wordpress" onClick={() => props.updateTech("wordpress")} src="/images/wordpress.png" />
           </div>
         </div>
     </>

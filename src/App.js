@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 
 import Nav from './Components/Nav'
-import logo from './logo.svg';
 import './App.scss';
 import Portfolio from './Components/Portfolio';
-import Button from './Components/Button'
 import Sidebar from './Components/Sidebar'
 
 import InjectSheet from 'react-jss';
-
-import {useSpring, animated} from 'react-spring'
 
 
 const styles = {
