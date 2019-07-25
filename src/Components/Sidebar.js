@@ -79,8 +79,12 @@ const styles = {
       transition: "right .5s",
       zIndex: "1",
       background: "#000",
-      overflowY: "scroll"
+      overflowY: "scroll",
 
+    },
+
+    tech: {
+      marginBottom: "100px"
     },
 
     headshot: {
