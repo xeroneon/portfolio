@@ -5,8 +5,12 @@ import logo from './logo.svg';
 import './App.scss';
 import Portfolio from './Components/Portfolio';
 import Button from './Components/Button'
+import Sidebar from './Components/Sidebar'
 
 import InjectSheet from 'react-jss';
+
+import {useSpring, animated} from 'react-spring'
+
 
 const styles = {
   container: {
@@ -58,6 +62,33 @@ const styles = {
   },
   filter: {
     textAlign: "center"
+  },
+  drawerButton: {
+    position: "fixed",
+    top: "10px",
+    right: "10px",
+    display: "grid",
+    placeContent: "center",
+    width: "20px",
+    height: "20px",
+    border: "white solid 2px",
+    borderRadius: "50%"
+  },
+
+  '@media (max-width: 1024px)': {
+    container: {
+      gridTemplateColumns: "1fr"
+    },
+
+    sideMenu: {
+      position: "fixed !important",
+      height: "100vh !important",
+      width: "600px",
+      top: "0",
+      right: "-600px",
+      zIndex: "1",
+      background: "#000"
+    },
   }
 }
 
@@ -66,52 +97,17 @@ const App = props => {
 
   const { classes } = props
   const [tech, setTech] = useState("")
-
-  const setAll = () => {
-    setTech("");
-    console.log(tech)
-  }
+  const [ open, setOpen ] = useState(false)
 
   return (
     <>
       <Nav />
+      <div className={classes.drawerButton} onClick={() => setOpen(!open)}>i</div>
       <div className={classes.container}>
         <div style={{ background: "#424242", borderRadius: "0 30px 0 0" }}>
           <Portfolio selTech={tech} />
         </div>
-        <div>
-          <div className={classes.headshot}>
-            <img src="images/headshot.jpg"></img>
-          </div>
-
-          <div className={classes.links}>
-            <Button name="Github" href="https://github.com/xeroneon" />
-            <Button name="LinkedIn" href="https://www.linkedin.com/in/andrew-vasquez-659062126/" />
-          </div>
-          <div className={classes.filter}>
-            <h1>Filter Projects</h1>
-          </div>
-
-          <div className={classes.all}>
-            {/* <Button onClick={() => setAll()} name="All" target /> */}
-            {/* <div onClick={() => setAll()}>All</div> */}
-            <img onClick={() => setAll()} src="/images/all.png" />
-          </div>
-
-          <div className={classes.tech}>
-            <img className={classes.techImg} onClick={() => setTech("mongo")} src="/images/mongo.png" />
-            <img className={classes.techImg} onClick={() => setTech("mysql")} src="/images/mysql.png" />
-            <img className={classes.techImg} onClick={() => setTech("react")} src="/images/react.png" />
-            <img className={classes.techImg} onClick={() => setTech("firebase")} src="/images/firebase.png" />
-            <img className={classes.techImg} onClick={() => setTech("node")} src="/images/node.png" />
-            <img className={classes.techImg} onClick={() => setTech("js")} src="/images/js.png" />
-            <img className={classes.techImg} onClick={() => setTech("express")} src="/images/express.png" />
-            <img className={classes.techImg} onClick={() => setTech("handlebars")} src="/images/handlebars.png" />
-            <img className={classes.techImg} onClick={() => setTech("html")} src="/images/html.png" />
-            <img className={classes.techImg} onClick={() => setTech("css")} src="/images/css.png" />
-            <img className={classes.techImg} onClick={() => setTech("wordpress")} src="/images/wordpress.png" />
-          </div>
-        </div>
+        <Sidebar open={open} close={() => setOpen(false)}/>
       </div>
     </>
   );

@@ -18,7 +18,7 @@ const styles = {
         height: "15vw" }),
     p: {
         width: "80%",
-        fontSize: "1vw"
+        fontSize: "16px"
     },
     h1: {
         fontSize: "2.5vw"
@@ -48,11 +48,16 @@ const styles = {
         alignContent: "center",
         '& img': {
             width: "90%",
+            minWidth: "20px",
             margin: "5px"
         }
     },
 
     '@media (max-width: 1024px)': {
+
+    },
+
+    '@media (max-width: 1350px)': {
         container: {
             gridTemplateColumns: "1fr !important",
             gridTemplateRows: "auto",
@@ -61,22 +66,31 @@ const styles = {
             // gridTemplateRows: "1fr 1fr 1fr 1fr",
         },
         h1: {
-            padding: "5px"
+            padding: "5px",
+            fontSize: "3vw"
         },
         tech: {
             display: "none"
         },
         buttons: {
             flexDirection: "row",
-            justifyContent: "start"
+            justifyContent: "start",
+            marginLeft: "10px"
         },
         imgDiv: {
-            padding: "0",
-            marginTop: "20px"
+            padding: "0 !important",
+            marginTop: "20px",
+            alignItems: "flex-end !important",
         },
         p: {
           fontSize: "14px",
           display: "none"
+        }
+      },
+
+      '@media (max-width: 700px)': {
+        h1: {
+            fontSize: "7vw"
         }
       }
 }
@@ -84,29 +98,6 @@ const styles = {
 const PortfolioItem = props => {
 
     const { classes, tech } = props;
-
-    const [width, setWidth ] = useState(window.innerWidth);
-    const [ isMobile, setIsMobile ] = useState()
-
-    // useEffect(() => {
-    //     window.addEventListener('resize', () => {
-    //         setWidth(window.innerWidth)
-    //         if(window.innerWidth > 1024) {
-    //             setIsMobile(false)
-    //         } else {
-    //             setIsMobile(true)
-    //         }
-    //     });
-
-    //     if(window.innerWidth > 1024) {
-    //         setIsMobile(false)
-    //     } else {
-    //         setIsMobile(true)
-    //     }
-
-    //     // if(window.inner)
-    //     console.log(window.innerWidth)
-    // }, [])
 
     const bounceIn = useSpring({
         to: async (next, cancel) => {
@@ -123,13 +114,10 @@ const PortfolioItem = props => {
     return (
         <>
                 <animated.div style={bounceIn} className={classes.container}>
-                    {/* {!isMobile && */}
                     <div className={classes.tech}>
                         {tech.map(item => {
                             return <img src={`/images/${item}.png`}/>
                         })}
-
-                        {/* {console.log(props.tech)} */}
 
                     </div>
                     <div>

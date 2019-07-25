@@ -10,13 +10,19 @@ const styles = {
     container: {
         display: "grid",
         gridTemplateColumns: "1fr", 
-        gridGap: "10px",
+        gridGap: "30px",
         padding: "60px",
     },
 
-    '@media (max-width: 1024px)': {
+    '@media (max-width: 1350px)': {
         container: {
             gridTemplateColumns: "1fr 1fr !important"
+        }
+    },
+
+    '@media (max-width: 700px)': {
+        container: {
+            gridTemplateColumns: "1fr !important"
         }
     }
 }
