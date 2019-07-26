@@ -70,8 +70,19 @@ const styles = {
         borderRadius: "20px 20px 0 0"
     },  
 
-    '@media (max-width: 1024px)': {
-
+    '@media (min-width: 1350px)': {
+        infoButton:{
+            display: "none"
+        },
+        info: {
+            display: "none !important"
+        },
+        h1: {
+            display: "block !important"
+        },
+        title: {
+            display: "block !important"
+        }
     },
 
     '@media (max-width: 1350px)': {
@@ -146,7 +157,7 @@ const PortfolioItem = props => {
                         })}
 
                     </div>
-                    <div style={{display: infoOpen ? "none" : "block"}}>
+                    <div className={classes.title} style={{display: infoOpen ? "none" : "block"}}>
                         <h1 className={classes.h1}>{props.title}</h1>
                         <p className={classes.p}>{props.summary}</p>
                     </div>

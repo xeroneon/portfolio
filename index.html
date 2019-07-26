@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BIO | Home</title>
+    <meta name="author" content="Brion Lund">
+    <meta name="description" content="Web Portfolio">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/uad1vbl.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="blue-grey darken-4">
+            <div class="nav-wrapper">
+                <a href="#"><i class="material-icons left" id="menu">menu</i></a>
+                <a href="#" class="brand-logo left hide-on-med-and-down"><img src="images/logo.png"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+            What I'm Working On,
+        <div class="row scrolling-wrapper-flexbox" id="h-wrapper">
+            
+            <div class="card" >
+                <div class="card-image">
+                    <img src="images/mobo.jpeg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/mobo.jpeg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing  bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <div class="card-image">
+                    <img src="images/mobo.jpeg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing  bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <div class="card-image">
+                    <img src="images/mobo.jpeg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing  bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <div class="card-image">
+                    <img src="images/mobo.jpeg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing  bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+
+            <div class="card ">
+                <div class="card-image">
+                    <img src="images/mobo.jpeg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing  bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+
+            <div class="card " id="last-card">
+                <div class="card-image">
+                    <img src="images/mobo.jpeg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing  bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Github project flow here-->
+    </main>
+    <div class="row">
+        <div class="deep-orange darken-1" id="footertag">Tools I Use</div>
+    </div>
+    <footer class="page-footer blue-grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s1 offset-s3"><img src="images/html.svg"></div>
+                <div class="col s1"><img src="images/css.svg"></div>
+                <div class="col s1"><img src="images/javascript.svg"></div>
+                <div class="col s1"><img src="images/photoshop.png"></div>
+                <div class="col s1"> <img src="images/xd.png"></div>
+                <div class="col s1"><img src="images/vscode.svg"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        $(window).on('wheel', function (event) {
+
+            // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
+            if (event.originalEvent.deltaY < 0) {
+                console.log(event.originalEvent.deltaY)
+                // $("#h-wrapper").scrollTop += 200;
+                var position = $("#h-wrapper").scrollLeft();
+                // $("#h-wrapper").scrollLeft(position - 100);
+
+                $("#h-wrapper").animate({ 'scrollLeft': '+=-' + 30 + 'px' }, 15);
+            }
+            else {
+                var position = $("#h-wrapper").scrollLeft();
+                // $("#h-wrapper").scrollLeft(position + 100);
+
+                $("#h-wrapper").animate({ 'scrollLeft': '-=-' + 30 + 'px' }, 15);
+                // wheeled down
+
+            }
+        });
+    </script>
+</body>
+
+</html>
