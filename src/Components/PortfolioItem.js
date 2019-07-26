@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button'
 
 import InjectSheet from 'react-jss';
@@ -51,6 +51,25 @@ const styles = {
         }
     },
 
+    infoButton: {
+        position: "absolute",
+        top: "10px",
+        right: "10px",
+        display: "grid",
+        placeContent: "center",
+        width: "20px",
+        height: "20px",
+        border: "white solid 2px",
+        borderRadius: "50%",
+        fontSize: "14px"
+    },
+
+    info: {
+        // background: "#212121",
+        padding: "20px",
+        borderRadius: "20px 20px 0 0"
+    },  
+
     '@media (max-width: 1024px)': {
 
     },
@@ -72,11 +91,14 @@ const styles = {
         buttons: {
             flexDirection: "row",
             justifyContent: "start",
-            marginLeft: "10px"
+            marginLeft: "10px",
+            marginBottom: "20px"
+        },
+        img: {
+            borderRadius: "0 0 20px 20px"
         },
         imgDiv: {
             padding: "0 !important",
-            marginTop: "20px",
             alignItems: "flex-end !important",
         },
         p: {
@@ -96,6 +118,8 @@ const PortfolioItem = props => {
 
     const { classes, tech } = props;
 
+    const [ infoOpen, setInfoOpen ] = useState(false);
+
     const bounceIn = useSpring({
         to: async (next, cancel) => {
             await next({opacity: 1, transform: "scale(1.05)"})
@@ -111,13 +135,18 @@ const PortfolioItem = props => {
     return (
         <>
                 <animated.div style={bounceIn} className={classes.container}>
+                    <div className={classes.infoButton} onClick={() => setInfoOpen(!infoOpen)}>{infoOpen ? "X" : "i"}</div>
+                    <div className={classes.info} style={{display: infoOpen ? "block" : "none"}}>
+                        <p>{props.summary}</p>
+
+                    </div>
                     <div className={classes.tech}>
                         {tech.map(item => {
                             return <img src={`/images/${item}.png`} alt={item} key={item + props.image}/>
                         })}
 
                     </div>
-                    <div>
+                    <div style={{display: infoOpen ? "none" : "block"}}>
                         <h1 className={classes.h1}>{props.title}</h1>
                         <p className={classes.p}>{props.summary}</p>
                     </div>
