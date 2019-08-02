@@ -2,7 +2,6 @@ import React from 'react';
 
 import InjectSheet from 'react-jss';
 
-
 const styles = {
     a: {
         color: "white",

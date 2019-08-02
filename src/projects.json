@@ -26,6 +26,16 @@
 
     },
     {
+        "title": "Vue-todo",
+        "summary": "Vue todo app I created to learn Vue" ,
+        "image": "/images/vue-todo.PNG",
+        "link": "https://vue-todo-andrew.netlify.com/",
+        "repo": "https://github.com/xeroneon/vue-do/",
+        "gradient": "#455a64, #263238",
+        "tech": ["vue"]
+
+    },
+    {
         "title": "Brightstar Bucks",
         "summary": "Managers can create goals for employees and upon completion they recieve credits to purchase company merch." ,
         "image": "/images/brightstar-bucks.PNG",

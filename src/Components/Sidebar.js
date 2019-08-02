@@ -125,6 +125,7 @@ const Sidebar = props => {
             <img className={classes.techImg} alt="mongo" onClick={() => props.updateTech("mongo")} src="/images/mongo.png" />
             <img className={classes.techImg} alt="mysql" onClick={() => props.updateTech("mysql")} src="/images/mysql.png" />
             <img className={classes.techImg} alt="react" onClick={() => props.updateTech("react")} src="/images/react.png" />
+            <img className={classes.techImg} alt="vue" onClick={() => props.updateTech("vue")} src="/images/vue.png" />
             <img className={classes.techImg} alt="firebase" onClick={() => props.updateTech("firebase")} src="/images/firebase.png" />
             <img className={classes.techImg} alt="node" onClick={() => props.updateTech("node")} src="/images/node.png" />
             <img className={classes.techImg} alt="js" onClick={() => props.updateTech("js")} src="/images/js.png" />
@@ -133,6 +134,7 @@ const Sidebar = props => {
             <img className={classes.techImg} alt="html" onClick={() => props.updateTech("html")} src="/images/html.png" />
             <img className={classes.techImg} alt="css" onClick={() => props.updateTech("css")} src="/images/css.png" />
             <img className={classes.techImg} alt="wordpress" onClick={() => props.updateTech("wordpress")} src="/images/wordpress.png" />
+
           </div>
         </div>
     </>
