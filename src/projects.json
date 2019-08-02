@@ -26,6 +26,16 @@
 
     },
     {
+        "title": "Tavern Games (WIP)",
+        "summary": "I aspire to one day open a card shop, this application will one day be a deck manager and the POS system/ Inventory management for the store (Heroku sites take a moment to start up, give it some time)" ,
+        "image": "/images/taverngames.PNG",
+        "link": "https://taverngames.herokuapp.com/",
+        "repo": "https://github.com/xeroneon/taverngames/",
+        "gradient": "#a8e063, #56ab2f",
+        "tech": ["mongo", "express", "react", "node"]
+
+    },
+    {
         "title": "Vue-todo",
         "summary": "Vue todo app I created to learn Vue" ,
         "image": "/images/vue-todo.PNG",
@@ -37,7 +47,7 @@
     },
     {
         "title": "Brightstar Bucks",
-        "summary": "Managers can create goals for employees and upon completion they recieve credits to purchase company merch." ,
+        "summary": "Managers can create goals for employees and upon completion they recieve credits to purchase company merch. (Heroku sites take a moment to start up, give it some time)" ,
         "image": "/images/brightstar-bucks.PNG",
         "link": "https://brightstarbucks.herokuapp.com/",
         "repo": "https://github.com/xeroneon/brightstar/",
@@ -47,7 +57,7 @@
     },
     {
         "title": "HIKER",
-        "summary": "When users go hiking they can check in and if they dont check out in time their emergency contacts are notified by text." ,
+        "summary": "When users go hiking they can check in and if they dont check out in time their emergency contacts are notified by text. (Heroku sites take a moment to start up, give it some time)" ,
         "image": "/images/hiker.PNG",
         "link": "https://hiker-az.herokuapp.com/",
         "repo": "https://github.com/xeroneon/Hiker/",
@@ -98,7 +108,7 @@
     },
     {
         "title": "myDeck",
-        "summary": "Users can create and manage Magic: The Gathering decks." ,
+        "summary": "Users can create and manage Magic: The Gathering decks. (Heroku sites take a moment to start up, give it some time)" ,
         "image": "/images/project-2.PNG",
         "link": "https://safe-coast-77807.herokuapp.com/",
         "repo": "https://github.com/xeroneon/project-2/",
