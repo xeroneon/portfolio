@@ -70,7 +70,7 @@
         "title": "League of Clicks",
         "summary": "This application showcases what I learned in React the first week I learned it." ,
         "image": "/images/clicky.PNG",
-        "link": "https://clicky-ua.herokuapp.com/",
+        "link": "https://leagueofclicks.netlify.com/",
         "repo": "https://github.com/xeroneon/clicky/",
         "gradient": "#5BB0B7, #4E7984",
         "tech": ["react"]
